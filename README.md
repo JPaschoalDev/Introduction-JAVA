@@ -1,68 +1,73 @@
-⚡ Sistema de Cálculos Eletroeletrônicos (Java Console)
+# ⚡ Sistema de Análise Elétrica (Java)
 
-📖 Sobre
+## 📖 Sobre
+Este projeto é um **Sistema de Análise Elétrica** desenvolvido em **Java**.  
+Ele demonstra o uso de **estruturas condicionais, métodos personalizados, cálculos físicos e menu interativo**.
 
-Este projeto marca minha transição da lógica de programação (Portugol) para a linguagem Java.
+O programa:
+- Calcula a intensidade da corrente elétrica (Lei de Ohm).
+- Identifica o tipo de corrente (CA ou CC) conforme a fonte de energia.
+- Compara a potência entre sistemas de 12V CC e 127V CA.
+- Monitora o status de segurança de painéis eletrônicos.
+- Simula um conversor de tensão AC/DC.
+- Utiliza menu interativo com navegação contínua.
 
-Trata-se de uma aplicação via console que auxilia estudantes e técnicos em cálculos fundamentais de eletricidade.
+---
 
-O programa demonstra o uso de:
+## 🚀 Funcionalidades
+- ✅ Cálculo de corrente elétrica usando a Lei de Ohm (I = V / R)
+- ✅ Identificação de tipo de corrente (Alternada ou Contínua)
+- ✅ Comparação de potência entre diferentes sistemas elétricos
+- ✅ Sistema de monitoramento de segurança com 3 níveis de alerta
+- ✅ Simulação de conversor AC/DC
+- ✅ Interface com menu interativo e limpeza de console
+- ✅ Validação de entradas do usuário
+- ✅ Navegação contínua até encerramento manual
 
-Scanner Global para gerenciamento eficiente de memória.
+---
 
-Modularização com métodos estáticos (static void).
+## 📂 Estrutura do Projeto
+```
+📦 sistema-analise-eletrica
+ ┣ 📜 Main.java
+ ┗ 📜 README.md
+```
 
-Estruturas de Repetição (do-while) e Decisão (switch-case, if/else).
+---
 
-Tratamento de Buffer de teclado para evitar erros de leitura.
+## ▶️ Como Executar
 
-Formatação de Saída (printf) para valores decimais.
+### Pré-requisitos
+- **JDK 8** ou superior instalado
+- Terminal/Prompt de Comando
 
-🚀 Funcionalidades
+### Passos para Execução
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-analise-eletrica.git
+   ```
 
-O sistema conta com um menu interativo contendo 5 ferramentas principais:
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd sistema-analise-eletrica
+   ```
 
-✅ Lei de Ohm: Cálculo da Intensidade de Corrente ($I = V / R$).
+3. Compile o programa:
+   ```bash
+   javac Main.java
+   ```
 
-✅ Identificador de Fonte: Distinção entre Corrente Alternada (Tomada) e Contínua (Bateria).
+4. Execute o programa:
+   ```bash
+   java Main
+   ```
 
-✅ Comparador de Potência: Analisa se um sistema 12V (CC) ou 127V (CA) tem maior potência baseado na corrente informada.
+---
 
-✅ Painel de Segurança: Monitoramento de níveis de corrente (Seguro, Atenção, Risco).
+## 🖥️ Exemplo de Execução
 
-✅ Simulador de Conversor: Verifica a viabilidade de conversão AC/DC.
-
-✅ UX/UI via Console: Sistema de "Limpeza de Tela" e "Pausa" para melhor experiência do usuário.
-
-📂 Arquivos
-
-src/Main.java → Código-fonte principal contendo a lógica e o menu.
-
-out/artifacts/.../*.jar → Arquivo executável (Build Artifact).
-
-▶️ Como Executar
-
-Opção 1: Via IDE (IntelliJ IDEA)
-
-Clone este repositório.
-
-Abra o projeto no IntelliJ IDEA.
-
-Execute a classe Main.java.
-
-Opção 2: Via Executável (.jar)
-
-Se você tiver o Java instalado, pode rodar o arquivo compilado pelo terminal:
-
-java -jar AtividadeEAD.jar
-
-
-Nota: Certifique-se de usar o Java 21 ou compatível.
-
-🖥️ Exemplo de Execução
-
-Menu Principal
-
+### Menu Principal
+```
 =========== ATIVIDADE EAD ===========
 =====================================
 
@@ -73,47 +78,132 @@ Menu Principal
 [5] CONVERSOR SIMPLES
 [0] ENCERRAR PROGRAMA
 > ESCOLHA SUA OPÇÃO: 1
+```
 
+---
 
-Exemplo: Cálculo de Lei de Ohm
-
-INFORME O VALOR DA RESISTÊNCIA (R) EM OHMS: 100
-
+### Exemplo 1: Medindo Intensidade da Corrente
+```
+INFORME O VALOR DA RESISTÊNCIA (R) EM OHMS: 6
 SABENDO QUE O VALOR DA TENSÃO (V) É DE 12
 PODEMOS CALCULAR A CORRENTE ELÉTRICA (I) ATRAVÉS DA EXPRESSÃO (I = V / R).
-FICARIA: I = 12 / 100.00
+FICARIA: I = 12 / 6.00
+CORRENTE ELÉTRICA: 2.0
+```
 
-CORRENTE ELÉTRICA: 0.12
+---
+
+### Exemplo 2: Identificando Corrente
+```
+INFORME QUAL A FONTE LIGADA AO APARELHO
+[1] TOMADA
+[2] BATERIA
+> ESCOLHA SUA OPÇÃO: 1
+O TIPO DE CORRENTE LIGADA A UMA TOMADA É A ALTERNADA (CA)
+```
+
+---
+
+### Exemplo 3: Comparando Potência
+```
+CÁLCULO DE MAIOR POTÊNCIA
+INFORME O VALOR DA CORRENTE ELÉTRICA: 5
+
+EM UM SISTEMA QUE FUNCIONA A 12V CC
+A POTÊNCIA DO SISTEMA É DE: 60.000
+
+EM UM SISTEMA QUE FUNCIONA A 127V CA
+A POTÊNCIA DO SISTEMA É DE: 635.000
+
+O SISTEMA QUE FUNCIONA A 127V CA TEM A MAIOR POTÊNCIA ENERGÉTICA
+```
+
+---
+
+### Exemplo 4: Sistema de Identificação (Painel Eletrônico)
+```
+PAINEL ELETRÔNICO
+INFORME O VALOR DA CORRENTE ELÉTRICA (I): 8
+STATUS PAINEL: ATENÇÃO!
+```
+
+---
+
+### Exemplo 5: Conversor de Tensão
+```
+CONVERSOR SIMPLES DE TENSÃO
+QUAL A ENTRADA?
+[1] AC
+[2] DC
+> ESCOLHA SUA OPÇÃO: 1
+O EQUIPAMENTO EFETUA A CONVERSÃO DE AC PARA DC
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+- ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+- **IDE**: IntelliJ IDEA (ou qualquer IDE Java)
+- **Biblioteca**: `java.util.Scanner` (para entrada de dados)
+
+---
+
+## 📐 Fórmulas Utilizadas
+
+### Lei de Ohm
+```
+I = V / R
+```
+- **I** = Corrente elétrica (Amperes)
+- **V** = Tensão (Volts)
+- **R** = Resistência (Ohms)
+
+### Potência Elétrica
+```
+P = V × I
+```
+- **P** = Potência (Watts)
+- **V** = Tensão (Volts)
+- **I** = Corrente (Amperes)
+
+---
+
+## 🔒 Níveis de Segurança do Painel
+
+| Corrente (I) | Status | Descrição |
+|--------------|--------|-----------|
+| I < 5A | ✅ Nível Seguro | Operação normal |
+| 5A ≤ I < 10A | ⚠️ Atenção! | Monitoramento necessário |
+| I ≥ 10A | 🚨 Risco de Superaquecimento! | Intervenção imediata |
+
+---
+
+## 📌 Possíveis Melhorias
+- [ ] Adicionar suporte para múltiplos circuitos em paralelo/série
+- [ ] Implementar cálculo de potência dissipada e eficiência energética
+- [ ] Criar histórico de medições realizadas
+- [ ] Adicionar interface gráfica (GUI) usando Swing ou JavaFX
+- [ ] Implementar simulação de circuitos elétricos mais complexos
+- [ ] Adicionar validação mais robusta de entradas numéricas
+- [ ] Incluir conversão entre unidades elétricas (mA, kV, MW, etc.)
+- [ ] Exportar relatórios de análise em formato PDF ou CSV
+
+---
+
+## 🤝 Contribuindo
+Contribuições são bem-vindas! Sinta-se à vontade para:
+1. Fazer um fork do projeto
+2. Criar uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
+5. Abrir um Pull Request
+
+---
+
+## 👨‍💻 Autor
+Desenvolvido como atividade acadêmica para estudo de lógica de programação e conceitos de eletricidade básica.
 
 
-🛠️ Tecnologias
+---
 
-Linguagem: Java (JDK 21)
-
-IDE: IntelliJ IDEA
-
-Conceitos: POO (básico), Métodos Estáticos, Loops, Clean Code
-
-⚡ Fórmulas e Conceitos Aplicados
-
-Lei de Ohm: $I = V / R$ (Onde Tensão é fixada em 12V).
-
-Potência Elétrica: $P = V \times I$.
-
-Segurança:
-
-$I < 5A$: Seguro 🟢
-
-$5A \le I < 10A$: Atenção 🟡
-
-$I \ge 10A$: Risco de Superaquecimento 🔴
-
-📌 Possíveis Melhorias
-
-[ ] Implementar tratamento de exceções (try-catch) para evitar erro se o usuário digitar letras.
-
-[ ] Permitir que o usuário defina a Tensão (V) personalizada na Lei de Ohm.
-
-[ ] Criar uma Interface Gráfica (Swing ou JavaFX).
-
-[ ] Salvar o histórico dos cálculos em um arquivo de texto (.txt).
+⭐ Se este projeto foi útil para você, considere dar uma estrela!
